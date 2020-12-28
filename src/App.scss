@@ -1,50 +1,134 @@
 @import "~bootstrap/scss/bootstrap";
 
 .side-bar {
-    margin-top:10vh;
-    padding-top:30px;
-    height: 70%;
-    display: flex;
-    flex-direction: column;
-    background-color: rgba(120,120,120,0.8);
-    transition: 1s ease;
-    color: white;
-    border-radius: 0px 5px 5px 0px;
+  position:absolute;
+  margin-top:10vh;
+  padding-top:30px;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(120,120,120,0.8);
+  transition: 1s ease;
+  color: red;
+  border-radius: 0px 5px 5px 0px;
 }
 
 .toggle-menu {
+  outline: none;
+  background-color: rgba(120,120,120,0.8);
+  border:none;
+  border-bottom-right-radius: 5px;
+
+  &:focus {
     outline: none;
-    background-color: rgba(120,120,120,0.8);
-    border:none;
-    border-bottom-right-radius: 5px;
-    &:focus {
-        outline: none;
-    }
+  }
 }
 
 svg:hover {
-  fill: white;
+  fill: red;
 }
 
 svg {
   fill: rgba(80,80,80,0.8);
 }
 
-#main {
-    height: 100vh;
-    background: green;
-}
-
 #location-input {
   margin-top: 10px;
-  border-width: 3px;
+  border-width: 0px;
   border-radius: 5px;
   font-weight:bold;
   border-color: rgba(80,80,80,0.8);
   border-style: solid;
-  box-shadow: 0px 0px 5px rgba(80,80,80,0.8) inset;
+  box-shadow: 0px 0px 5px red inset;
+
+  &:focus {
+    outline: none;
+  }
 }
 
-#location-input:focus {
-  outline: none;
+.map-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index:-1;
+}
+
+.marker {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:hover {
+    svg path {
+      fill: white;
+    }
+  }
+}
+
+.mapboxgl-popup {
+  padding-bottom: 0px;
+}
+
+.mapboxgl-popup-close-button {
+  display:none;
+}
+
+.mapboxgl-popup-content {
+  font:400 15px/22px 'Source Sans Pro', 'Helvetica Neue', Sans-serif;
+  padding:0;
+  width:180px;
+
+  h5 {
+  background:red;
+  color:#fff;
+  margin:0;
+  display:block;
+  padding:10px;
+  border-radius:3px 3px 0 0;
+  font-weight:700;
+  margin-top:-15px;
+  }
+
+  p {
+  margin:0;
+  display:block;
+  padding: 10px 10px 10px 10px;
+  font-weight:400;
+  }
+
+  div {
+  padding:10px;
+  }
+}
+
+.mapboxgl-popup-content-wrapper {
+  padding:1%;
+}
+
+.mapboxgl-container .leaflet-marker-icon {
+  cursor:pointer;
+}
+
+.mapboxgl-popup-anchor-top > .mapboxgl-popup-content {
+  margin-top: 15px;
+}
+
+.mapboxgl-popup-anchor-top > .mapboxgl-popup-tip {
+  border-bottom-color: none;
+}
+
+.places {
+  margin-top: 15px;
+  
+  &:hover {
+    color:white;
+    cursor:pointer;
+  }
+}
+
+.notfound {
+  margin-top: 25px;
 }

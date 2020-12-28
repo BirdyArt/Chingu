@@ -1,6 +1,6 @@
-import React, { Component, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
-const Sidebar = ({ width, height, children }) => {
+const Sidebar = ({ width, height, children, geodata }) => {
   const [xPosition, setX] = useState(-width);
 
   const toggleMenu = () => {
@@ -13,7 +13,7 @@ const Sidebar = ({ width, height, children }) => {
 
   useEffect(() => {
     setX(-width);
-  }, []);
+  }, []);  // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <>
@@ -32,12 +32,18 @@ const Sidebar = ({ width, height, children }) => {
           minHeight: height
         }}
       >
-        
-        <div className="content">{children}</div>
+        <div className="content">
+          {children}
+          {(geodata.some(place => place.properties.visibility === "yes")) ?
+            geodata.map((place,index) => 
+            place.properties.visibility === "yes" ?
+              <h5 key={place.properties.name} id={index} className="text-center places">{place.properties.name}</h5> : null
+            ) : 
+            <h5 className="text-center notfound">Nothing is found 😟</h5>}
+        </div>
       </div>
     </>
   );
 }
-
 
 export default Sidebar;
