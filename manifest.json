@@ -1,0 +1,8 @@
+{
+  "short_name": "Mapbox Chingu",
+  "name": "Solo project Mapbox for Chingu",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
