@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import mapboxgl from 'mapbox-gl';
 import Marker from './MarkerComponent';
 
-mapboxgl.accessToken = "pk.eyJ1IjoiYmlyZHlhcnQiLCJhIjoiY2tpdGJrYXF1MDdnaDJzcGhpc2x3YWE4ZCJ9._OzxYGU8rcQbKhHso6m_qQ";
+mapboxgl.accessToken = process.env.MAPBOX_ACCESS_TOKEN;
 
 const Map = ({geodata}) => {
   const [map, setMap] = useState(null);

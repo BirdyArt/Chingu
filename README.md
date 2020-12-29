@@ -8,8 +8,9 @@ Toggle burger icon to show/hide sidebar and use input field to filter locations 
 
 ## Quick start 🚀
 
+1. Copy the contents of `.env.local.example` into an `.env.local` file (`cp .env.local.example .env.local` and replace `YOUR_TOKEN_HERE` with your token
 1. Run `npm start` to start the dev server
-1. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. Open [http://localhost:3000](http://localhost:3000) to view it in the browser
 
 ## Resources
 - [Create React App](https://github.com/facebook/create-react-app)
