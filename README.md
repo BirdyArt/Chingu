@@ -2,7 +2,7 @@
 
 ![Screenshot](https://github.com/birdyart/chingu/blob/master/docs/mapboxapp.png)
 
-LIVE LINK: [MapboxAPI App](https://birdyart.github.io/Chingu/mapboxapp)
+LIVE LINK: [MapboxAPI App](https://birdyart.github.io/Chingu/)
 
 This app shows a map of Vancouver, Canada with 6 unique location markers. It was built with React, using Mapbox API.
 
