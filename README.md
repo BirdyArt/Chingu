@@ -1,6 +1,6 @@
 # React + Mapbox API Solo Project for Chingu Voyage #26 
 
-![Screenshot](https://github.com/birdyart/chingu/blob/development/docs/mapboxapp.png)
+![Screenshot](https://github.com/birdyart/chingu/blob/master/docs/mapboxapp.png)
 
 LIVE LINK: [MapboxAPI App](https://birdyart.github.io/Chingu/mapboxapp)
 
